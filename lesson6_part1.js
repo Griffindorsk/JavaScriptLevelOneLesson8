@@ -99,9 +99,8 @@ function printTheCatalogue(arrayOfObjects) {
         productButton.type = 'submit';
         productButton.className = 'roundButton';
         productButton.innerHTML = 'в&nbsp;корзину';
-        productButton.id = 'button_id_' + i;
         productButton.style.gridArea = j + ' / ' + k;
-        productButton.onclick = addToBasket;
+        productButton.onclick = addToBasket.bind(i);
         placement.appendChild(productButton);
     }
 }
@@ -140,18 +139,16 @@ function printTheBasket(arrayOfObjects) {
     sumPlacement[0].innerHTML = '<p>Заказано товаров на сумму: ' + newBasket.totalSum() + ' руб.</p>';
 }
 
-function addToBasket(eventObject) {
-    let productIndex = eventObject.target.id.slice(10);
-    productIndex = parseInt(productIndex);
+function addToBasket() {
 
     let basketObject = {
-        'артикул': productsCatalogue[productIndex].артикул,
-        'группа': productsCatalogue[productIndex].группа,
-        'бренд': productsCatalogue[productIndex].бренд,
-        'пол': productsCatalogue[productIndex].пол,
-        'размер': productsCatalogue[productIndex].размер,
-        'цвет': productsCatalogue[productIndex].цвет,
-        'цена': productsCatalogue[productIndex].цена,
+        'артикул': productsCatalogue[this].артикул,
+        'группа': productsCatalogue[this].группа,
+        'бренд': productsCatalogue[this].бренд,
+        'пол': productsCatalogue[this].пол,
+        'размер': productsCatalogue[this].размер,
+        'цвет': productsCatalogue[this].цвет,
+        'цена': productsCatalogue[this].цена,
         'количество': 1
     }
     // Проверка, есть ли уже такой товар в корзине. Если есть, то изменяется количество.
