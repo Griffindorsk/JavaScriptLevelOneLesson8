@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson-6 | JavaScript samples</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id='declaration'></div>
+        <div class="main_frame">
+            <div class="catalogue">
+                <h4>Каталог товаров</h4>
+                <form action="#">
+                    <label for="generation_value">Задайте кол-во товаров в каталоге</label>
+                    <input id="generation_value" type="number" min="1" max="20">
+                    <button id="generation_button" type="submit">Сгенерировать каталог</button>
+                </form>
+                <div id="catalogue_content" class="cat_content">
+                    <!-- автоматически генерится функцией catalogueFulfillment -->
+                </div>
+            </div>
+            <div class="basket">
+                <h4>Корзина</h4>
+                <div id="basket_content" class="cat_content"></div>
+                <div class="basket_total_sum"><p>Заказано товаров на сумму: 0 руб.</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="lesson6_part1.js"></script>
+</body>
+
+</html>

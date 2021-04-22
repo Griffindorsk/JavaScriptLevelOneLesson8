@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: grid;
+    justify-content: center;
+}
+.main_frame {
+    width: 94vw;
+    max-width: 1260px;
+    min-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+.catalogue {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.5;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin-right: 2vw;
+    background-color: antiquewhite;
+}
+.basket {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background-color: cadetblue;
+}
+.basket_total_sum {
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(97, 0, 0);
+}
+
+.catalogue input {
+    display: block;
+    padding: 0.3rem;
+    margin: 0.3rem 0;
+    border: none;
+    max-width: 60px;
+    min-width: 40px;
+}
+.catalogue button {
+    display: inline-block;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: cornflowerblue;
+    box-shadow: 1px 1px 2px rgb(21, 31, 49);
+}
+.catalogue button:hover {
+    background-color: rgb(63, 92, 146);
+    color: rgb(228, 240, 255);
+
+}
+.catalogue form {
+    margin: 0.5rem 0 0 0;
+}
+.catalogue label {
+    font-size: 0.8rem;
+}
+.catalogue p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+}
+.catalogue h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+.cat_content {
+    display: grid;
+}
+.cat_content h4 {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    text-align: center;
+}
+.cat_content p {
+    font-size: 0.7rem;
+      padding: 0.2rem;
+    text-align: center;
+}
+.roundButton {
+    display: grid;
+    background-color: rgb(247, 74, 6);
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    max-height: 1.3rem;
+    font-weight: 550;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.3rem;
+    box-shadow: 1px 1px 2px black;
+}
